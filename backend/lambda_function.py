@@ -803,7 +803,7 @@ def lambda_handler(event, context):
 
   # Capture the INITIAL_VEHICLE_STATE to verify that the vehicle is awake
   if INITIAL_VEHICLE_STATE == "online" or INITIAL_VEHICLE_STATE == "testing":
-    print("Sending the " + INPUT_CMD + " command to vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
+    print("Sending the " + INPUT_CMD + " command to tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
     RunCommand(BASE_URL, VEHICLE_ID, INPUT_CMD, PARAMETER_1, PARAMETER_2)
   else:
     print("Vehicle ID # " + VEHICLE_ID + " is currently " + INITIAL_VEHICLE_STATE)
@@ -811,5 +811,5 @@ def lambda_handler(event, context):
     print("Sending the wake_up command to vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
     WakeVehicle(BASE_URL, VEHICLE_ID)
 
-    print("Sending the " + INPUT_CMD + " command to vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
+    print("Sending the " + INPUT_CMD + " command to tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
     RunCommand(BASE_URL, VEHICLE_ID, INPUT_CMD, PARAMETER_1, PARAMETER_2)
