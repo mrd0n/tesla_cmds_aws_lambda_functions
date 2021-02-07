@@ -73,7 +73,7 @@ def lambda_handler(event, context):
     )
     MESSAGE_ID = SNS_RESPONSE["MessageId"]
 
-    print("Queueing the " + INPUT_CMD + " command for vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
+    print("Queueing the " + INPUT_CMD + " command for Tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
 
     RETURN_DATA = {
       "statusCode": 200,
