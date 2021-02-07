@@ -132,14 +132,14 @@ def lambda_handler(event, context):
         COUNTER = 0
 
         if COUNTER > 20:
-          print("ERROR: Exiting as the vehicle is not waking up...")
+          print("ERROR: Exiting as the Tesla vehicle is not waking up...")
           exit(1)
         else:
           # Sleep for 1 second and increment COUNTER
           time.sleep(1)
           COUNTER = COUNTER + 1
     else:
-      print("ERROR: The vehicle failed to receive the wake up command")
+      print("ERROR: The Tesla vehicle failed to receive the wake up command")
 
   # Function that locks the vehicle's doors
   def LockDoors(BASE_URL, VEHICLE_ID):
@@ -159,9 +159,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's doors are locked")
+      print("The Tesla vehicle's doors are locked")
     else:
-      print("ERROR: The vehicle failed to receive the door lock command")
+      print("ERROR: The Tesla vehicle failed to receive the door lock command")
 
   # Function that unlocks the vehicle's doors
   def UnlockDoors(BASE_URL, VEHICLE_ID):
@@ -181,9 +181,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's doors are unlocked")
+      print("The Tesla vehicle's doors are unlocked")
     else:
-      print("ERROR: The vehicle failed to receive the door unlock command")
+      print("ERROR: The Tesla vehicle failed to receive the door unlock command")
 
   # Function that activates the vehicle's horn
   def HonkHorn(BASE_URL, VEHICLE_ID):
@@ -203,9 +203,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's horn has been activated")
+      print("The Tesla vehicle's horn has been activated")
     else:
-      print("ERROR: The vehicle failed to receive the honk horn command")
+      print("ERROR: The Tesla vehicle failed to receive the honk horn command")
 
   # Function that flashes the vehicle's headlights
   def FlashLights(BASE_URL, VEHICLE_ID):
@@ -224,9 +224,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's lights have been flashed")
+      print("The Tesla vehicle's lights have been flashed")
     else:
-      print("ERROR: The vehicle failed to receive the flash lights command")
+      print("ERROR: The Tesla vehicle failed to receive the flash lights command")
 
   # Function that activates the vehicle's Climate Control system
   def StartClimateControl(BASE_URL, VEHICLE_ID):
@@ -245,9 +245,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's Climate Control system has been activated")
+      print("The Tesla vehicle's Climate Control system has been activated")
     else:
-      print("ERROR: The vehicle failed to receive the start Climate Control system command")
+      print("ERROR: The Tesla vehicle failed to receive the start Climate Control system command")
 
   # Function that deactivates the vehicle's Climate Control system
   def StopClimateControl(BASE_URL, VEHICLE_ID):
@@ -266,9 +266,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's Climate Control system has been deactivated")
+      print("The Tesla vehicle's Climate Control system has been deactivated")
     else:
-      print("ERROR: The vehicle failed to receive the stop Climate Control system command")
+      print("ERROR: The Tesla vehicle failed to receive the stop Climate Control system command")
 
   # Function that sets the vehicle's temperature in Celsius
   def SetTemps(BASE_URL, VEHICLE_ID, VEHICLE_TEMP):
@@ -292,9 +292,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's Climate Control system temperature has been set to " + VEHICLE_TEMP + " degrees Celsius")
+      print("The Tesla vehicle's Climate Control system temperature has been set to " + VEHICLE_TEMP + " degrees Celsius")
     else:
-      print("ERROR: The vehicle failed to receive the set Climate Control system temperature command")
+      print("ERROR: The Tesla vehicle failed to receive the set Climate Control system temperature command")
 
   # Function that activates the vehicle's defrost mode
   def StartDefrost(BASE_URL, VEHICLE_ID):
@@ -317,9 +317,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's defrost mode has been activated")
+      print("The Tesla vehicle's defrost mode has been activated")
     else:
-      print("ERROR: The vehicle failed to receive the start defrost mode command")
+      print("ERROR: The Tesla vehicle failed to receive the start defrost mode command")
 
   # Function that deactivates the vehicle's defrost mode
   def StopDefrost(BASE_URL, VEHICLE_ID):
@@ -342,9 +342,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's defrost mode has been deactivated")
+      print("The Tesla vehicle's defrost mode has been deactivated")
     else:
-      print("ERROR: The vehicle failed to receive the stop defrost mode command")
+      print("ERROR: The Tesla vehicle failed to receive the stop defrost mode command")
 
   # Function that sets the selected seat heater to the defined level
   def SetSeatHeater(BASE_URL, VEHICLE_ID, SEAT_HEATER_POSITION, SEAT_HEATER_LEVEL):
@@ -367,9 +367,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
     
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's " + str(SEAT_HEATER_POSITION) + " seat heater has been set to " + str(SEAT_HEATER_LEVEL))
+      print("The Tesla vehicle's " + str(SEAT_HEATER_POSITION) + " seat heater has been set to " + str(SEAT_HEATER_LEVEL))
     else:
-      print("ERROR: The vehicle failed to receive the set seat heater command")
+      print("ERROR: The Tesla vehicle failed to receive the set seat heater command")
 
   # Function that activates the driver's seat heater
   def StartDriverSeatHeater(BASE_URL, VEHICLE_ID):
@@ -432,9 +432,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's sentry mode system has been activated")
+      print("The Tesla vehicle's sentry mode system has been activated")
     else:
-      print("ERROR: The vehicle failed to receive the start sentry mode system command")
+      print("ERROR: The Tesla vehicle failed to receive the start sentry mode system command")
 
   # Function that deactivates the vehicle's sentry mode system
   def StopSentry(BASE_URL, VEHICLE_ID):
@@ -457,9 +457,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's sentry mode system has been deactivated")
+      print("The Tesla vehicle's sentry mode system has been deactivated")
     else:
-      print("ERROR: The vehicle failed to receive the stop sentry mode system command")
+      print("ERROR: The Tesla vehicle failed to receive the stop sentry mode system command")
 
   # Function that opens the vehicle's windows
   def OpenWindows(BASE_URL, VEHICLE_ID):
@@ -484,9 +484,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's windows have been opened")
+      print("The Tesla vehicle's windows have been opened")
     else:
-      print("ERROR: The vehicle failed to receive the open windows command")
+      print("ERROR: The Tesla vehicle failed to receive the open windows command")
 
   # Function that closes the vehicle's windows
   def CloseWindows(BASE_URL, VEHICLE_ID):
@@ -511,9 +511,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's windows have been closed")
+      print("The Tesla vehicle's windows have been closed")
     else:
-      print("ERROR: The vehicle failed to receive the close windows command")
+      print("ERROR: The Tesla vehicle failed to receive the close windows command")
 
   # Function that actuates the vehicle's frunk
   def ActuateFrunk(BASE_URL, VEHICLE_ID):
@@ -536,9 +536,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's frunk has been actuated")
+      print("The Tesla vehicle's frunk has been actuated")
     else:
-      print("ERROR: The vehicle failed to receive the actuate frunk command")
+      print("ERROR: The Tesla vehicle failed to receive the actuate frunk command")
 
   # Function that actuates the vehicle's trunk
   def ActuateTrunk(BASE_URL, VEHICLE_ID):
@@ -561,9 +561,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's trunk has been actuated")
+      print("The Tesla vehicle's trunk has been actuated")
     else:
-      print("ERROR: The vehicle failed to receive the actuate trunk command")
+      print("ERROR: The Tesla vehicle failed to receive the actuate trunk command")
 
   # Function that sets the vehicle's charge limit
   def SetChargeLimit(BASE_URL, VEHICLE_ID, VEHICLE_CHARGE_LIMIT):
@@ -586,9 +586,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's charge limit has been set to " + VEHICLE_CHARGE_LIMIT + "%")
+      print("The Tesla vehicle's charge limit has been set to " + VEHICLE_CHARGE_LIMIT + "%")
     else:
-      print("ERROR: The vehicle failed to receive the set charge limit command")
+      print("ERROR: The Tesla vehicle failed to receive the set charge limit command")
 
   # Function that starts charging the vehicle
   def StartCharging(BASE_URL, VEHICLE_ID):
@@ -607,9 +607,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle has started charging")
+      print("The Tesla vehicle has started charging")
     else:
-      print("ERROR: The vehicle failed to receive the start charge command")
+      print("ERROR: The Tesla vehicle failed to receive the start charge command")
 
   # Function that starts charging the vehicle
   def StopCharging(BASE_URL, VEHICLE_ID):
@@ -628,9 +628,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle has stopped charging")
+      print("The Tesla vehicle has stopped charging")
     else:
-      print("ERROR: The vehicle failed to receive the stop charge command")
+      print("ERROR: The Tesla vehicle failed to receive the stop charge command")
 
   # Function that opens the charge port door
   def OpenChargePortDoor(BASE_URL, VEHICLE_ID):
@@ -650,9 +650,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's charge port door has been opened")
+      print("The Tesla vehicle's charge port door has been opened")
     else:
-      print("ERROR: The vehicle failed to receive the open charge port door command")
+      print("ERROR: The Tesla vehicle failed to receive the open charge port door command")
 
   # Function that closes the charge port door
   def CloseChargePortDoor(BASE_URL, VEHICLE_ID):
@@ -672,9 +672,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("The vehicle's charge port door has been closed")
+      print("The Tesla vehicle's charge port door has been closed")
     else:
-      print("ERROR: The vehicle failed to receive the close charge port door command")
+      print("ERROR: The Tesla vehicle failed to receive the close charge port door command")
 
   # Function that starts a remote drive session for the vehicle
   def StartRemoteDrive(BASE_URL, VEHICLE_ID, PASSWORD):
@@ -697,9 +697,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("A remote driving session has been started for the vehicle")
+      print("A remote driving session has been started for the Tesla vehicle")
     else:
-      print("ERROR: A remote driving session has failed to start for the vehicle")
+      print("ERROR: A remote driving session has failed to start for the Tesla vehicle")
 
   # Function that triggers HomeLink
   def TriggerHomeLink(BASE_URL, VEHICLE_ID):
@@ -726,9 +726,9 @@ def lambda_handler(event, context):
     HTTP_REQUEST_STATUS_CODE = HTTP_REQUEST.status
 
     if HTTP_REQUEST_STATUS_CODE == 200:
-      print("HomeLink has been triggered on the vehicle")
+      print("HomeLink has been triggered on the Tesla vehicle")
     else:
-      print("ERROR: The vehicle failed to receive the trigger HomeLink command")
+      print("ERROR: The Tesla vehicle failed to receive the trigger HomeLink command")
 
   def RunCommand(BASE_URL, VEHICLE_ID, INPUT_CMD, PARAMETER_1, PARAMETER_2):
     # Run the appropriate command based on the value of INPUT_CMD
@@ -803,13 +803,13 @@ def lambda_handler(event, context):
 
   # Capture the INITIAL_VEHICLE_STATE to verify that the vehicle is awake
   if INITIAL_VEHICLE_STATE == "online" or INITIAL_VEHICLE_STATE == "testing":
-    print("Sending the " + INPUT_CMD + " command to tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
+    print("Sending the " + INPUT_CMD + " command to Tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
     RunCommand(BASE_URL, VEHICLE_ID, INPUT_CMD, PARAMETER_1, PARAMETER_2)
   else:
     print("Vehicle ID # " + VEHICLE_ID + " is currently " + INITIAL_VEHICLE_STATE)
 
-    print("Sending the wake_up command to vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
+    print("Sending the wake_up command to Tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
     WakeVehicle(BASE_URL, VEHICLE_ID)
 
-    print("Sending the " + INPUT_CMD + " command to tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
+    print("Sending the " + INPUT_CMD + " command to Tesla vehicle ID #" + VEHICLE_ID + " on behalf of " + CLIENT_IP_ADDRESS)
     RunCommand(BASE_URL, VEHICLE_ID, INPUT_CMD, PARAMETER_1, PARAMETER_2)
