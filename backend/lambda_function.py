@@ -6,7 +6,7 @@ def lambda_handler(event, context):
   MESSAGE_BODY_STR = event['Records'][0]['Sns']['Message']
   MESSAGE_BODY = json.loads(MESSAGE_BODY_STR) 
 
-  ########################################### Global Variables #####################################################
+  ########################################### Global Variables ####################################################
   BASE_URL = "https://owner-api.teslamotors.com/api/1/vehicles/"
   TOKEN = MESSAGE_BODY["TOKEN"]
   VEHICLE_ID = MESSAGE_BODY["VEHICLE_ID"]
