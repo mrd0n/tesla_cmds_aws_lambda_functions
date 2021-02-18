@@ -3,7 +3,7 @@
 import boto3,json,os,urllib3
 
 def lambda_handler(event, context):
-  ########################################### Global Variables ####################################################
+  ########################################### Global Variables ###################################################
   BASE_URL = "https://owner-api.teslamotors.com/api/1/vehicles/"
   EVENT_BODY = json.loads(event["body"])
   EVENT_HEADERS = event["headers"]
